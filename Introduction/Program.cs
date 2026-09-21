@@ -21,6 +21,9 @@ class Program
 
         int[] mapBounds = new int[4] { -100, 100, -100, 100 };
 
+        // Game logic
+        bool isGameRunning = true;
+
         // player creation
         string playerName;
         int playerHealth;
@@ -54,50 +57,57 @@ class Program
         Console.WriteLine(
             $"Your character has been created successfully. {playerName}, Health: {playerHealth}, Strength: {playerStrength}, Mana: {playerMana}");
 
-        // Movement 
-        // Instruct the player who to move
-        Console.WriteLine("Use w,a,s,d for movement to go north, west, south or east");
-        
-        // Get player input
-        var movementInput = Console.ReadLine().ToLower();
-        
-        // Determine what to do based in player input
-        switch (movementInput)
+
+        // GAME 
+        while (isGameRunning)
         {
-            case "w": // move north
-                playerPosition2D[1]++;
-                break;
-            case "a": // move west
-                playerPosition2D[0]--;
-                break;
-            case "s": // move south
-                playerPosition2D[1]--;
-                break;
-            case "d": // move east
-                playerPosition2D[0]++;
-                break;
-            default: // If no valid selection, instruct player to choose valid input.
-                Console.WriteLine("Invalid input. Movement not possible. Use keys as instructed!");
-                break;
+            // Movement 
+            // Instruct the player who to move
+            Console.WriteLine("Use w,a,s,d for movement to go north, west, south or east");
+
+            // Get player input
+            var movementInput = Console.ReadLine().ToLower();
+            
+            if (movementInput == "q") return; // quit game early, if player presses 'q'
+
+            // Determine what to do based in player input
+            switch (movementInput)
+            {
+                case "w": // move north
+                    playerPosition2D[1]++;
+                    break;
+                case "a": // move west
+                    playerPosition2D[0]--;
+                    break;
+                case "s": // move south
+                    playerPosition2D[1]--;
+                    break;
+                case "d": // move east
+                    playerPosition2D[0]++;
+                    break;
+                default: // If no valid selection, instruct player to choose valid input.
+                    Console.WriteLine("Invalid input. Movement not possible. Use keys as instructed!");
+                    break;
+            }
+
+            // Keep player within the map area
+            if (playerPosition2D[0] > mapBounds[1]) // player outside X max
+                playerPosition2D[0] = mapBounds[1];
+            else if (playerPosition2D[0] < mapBounds[0]) // player outside X min
+                playerPosition2D[0] = mapBounds[0];
+            if (playerPosition2D[1] > mapBounds[3]) // player outside Y max
+                playerPosition2D[1] = mapBounds[3];
+            else if (playerPosition2D[1] < mapBounds[2]) // player outside Y min
+                playerPosition2D[1] = mapBounds[2];
+
+
+            // print players new location with x and y on 2D Map
+            Console.WriteLine($"{playerName}, your are not at position ({playerPosition2D[0]}, {playerPosition2D[1]})");
+
+            // TODO:
+            // player equipment
+            // combat with npc
+            // reward system 
         }
-        
-        // Keep player within the map area
-        if(playerPosition2D[0] > mapBounds[1]) // player outside X max
-            playerPosition2D[0] = mapBounds[1];
-        else if(playerPosition2D[0] < mapBounds[0]) // player outside X min
-            playerPosition2D[0] = mapBounds[0];
-        if(playerPosition2D[1] > mapBounds[3]) // player outside Y max
-            playerPosition2D[1] = mapBounds[3];
-        else if(playerPosition2D[1] < mapBounds[2]) // player outside Y min
-            playerPosition2D[1] = mapBounds[2];
-        
-
-        // print players new location with x and y on 2D Map
-        Console.WriteLine($"{playerName}, your are not at position ({playerPosition2D[0]}, {playerPosition2D[1]})");
-
-        // TODO:
-        // player equipment
-        // combat with npc
-        // reward system
     }
 }
