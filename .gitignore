@@ -1,3 +1,3 @@
-./idea
-./Introduction/bin
-./Introduction/obj
+.idea/
+Introduction/bin/
+Introduction/obj/

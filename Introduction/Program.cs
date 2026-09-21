@@ -19,6 +19,8 @@ class Program
         const int STARTING_POS_X = 0;
         const int STARTING_POS_Y = 0;
 
+        int[] mapBounds = new int[4] { -100, 100, -100, 100 };
+
         // player creation
         string playerName;
         int playerHealth;
@@ -78,6 +80,17 @@ class Program
                 Console.WriteLine("Invalid input. Movement not possible. Use keys as instructed!");
                 break;
         }
+        
+        // Keep player within the map area
+        if(playerPosition2D[0] > mapBounds[1]) // player outside X max
+            playerPosition2D[0] = mapBounds[1];
+        else if(playerPosition2D[0] < mapBounds[0]) // player outside X min
+            playerPosition2D[0] = mapBounds[0];
+        if(playerPosition2D[1] > mapBounds[3]) // player outside Y max
+            playerPosition2D[1] = mapBounds[3];
+        else if(playerPosition2D[1] < mapBounds[2]) // player outside Y min
+            playerPosition2D[1] = mapBounds[2];
+        
 
         // print players new location with x and y on 2D Map
         Console.WriteLine($"{playerName}, your are not at position ({playerPosition2D[0]}, {playerPosition2D[1]})");
