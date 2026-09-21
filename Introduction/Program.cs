@@ -16,11 +16,15 @@ class Program
         const int MANA_MIN_CAP = 5;
         const int MANA_DEFAULT = 8;
 
+        const int STARTING_POS_X = 0;
+        const int STARTING_POS_Y = 0;
+
         // player creation
         string playerName;
         int playerHealth;
         int playerStrength;
         int playerMana;
+        int[] playerPosition2D = new int[2] { STARTING_POS_X, STARTING_POS_Y };
 
         // Print text to console
         Console.WriteLine("Welcome to the World of Magic Treasures!");
@@ -28,7 +32,7 @@ class Program
 
         // Get text input from console window and store in player name
         playerName = Console.ReadLine();
-        
+
         // Read in all stats and split stats into an array of texts to convert
         Console.WriteLine($"{playerName}, enter your health, strength and mana");
         var playerStatsAsText = Console.ReadLine().Split(",");
@@ -48,8 +52,37 @@ class Program
         Console.WriteLine(
             $"Your character has been created successfully. {playerName}, Health: {playerHealth}, Strength: {playerStrength}, Mana: {playerMana}");
 
+        // Movement 
+        // Instruct the player who to move
+        Console.WriteLine("Use w,a,s,d for movement to go north, west, south or east");
+        
+        // Get player input
+        var movementInput = Console.ReadLine().ToLower();
+        
+        // Determine what to do based in player input
+        switch (movementInput)
+        {
+            case "w": // move north
+                playerPosition2D[1]++;
+                break;
+            case "a": // move west
+                playerPosition2D[0]--;
+                break;
+            case "s": // move south
+                playerPosition2D[1]--;
+                break;
+            case "d": // move east
+                playerPosition2D[0]++;
+                break;
+            default: // If no valid selection, instruct player to choose valid input.
+                Console.WriteLine("Invalid input. Movement not possible. Use keys as instructed!");
+                break;
+        }
+
+        // print players new location with x and y on 2D Map
+        Console.WriteLine($"{playerName}, your are not at position ({playerPosition2D[0]}, {playerPosition2D[1]})");
+
         // TODO:
-        // player movement 
         // player equipment
         // combat with npc
         // reward system
