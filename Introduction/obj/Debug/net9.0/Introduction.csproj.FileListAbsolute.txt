@@ -12,3 +12,4 @@
 /Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Introduction/obj/Debug/net9.0/Introduction.pdb
 /Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Introduction/obj/Debug/net9.0/Introduction.genruntimeconfig.cache
 /Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Introduction/obj/Debug/net9.0/ref/Introduction.dll
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Introduction/obj/Debug/net9.0/Introduction.sourcelink.json

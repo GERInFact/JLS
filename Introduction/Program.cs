@@ -16,13 +16,11 @@ class Program
         const int MANA_MIN_CAP = 5;
         const int MANA_DEFAULT = 8;
 
-
         // player creation
         string playerName;
         int playerHealth;
         int playerStrength;
         int playerMana;
-
 
         // Print text to console
         Console.WriteLine("Welcome to the World of Magic Treasures!");
@@ -30,23 +28,19 @@ class Program
 
         // Get text input from console window and store in player name
         playerName = Console.ReadLine();
+        
+        // Read in all stats and split stats into an array of texts to convert
         Console.WriteLine($"{playerName}, enter your health, strength and mana");
+        var playerStatsAsText = Console.ReadLine().Split(",");
+        playerHealth = int.Parse(playerStatsAsText[0].Trim());
+        playerStrength = int.Parse(playerStatsAsText[1].Trim());
+        playerMana = int.Parse(playerStatsAsText[2].Trim());
 
-        // Convert text from input into integer for arithmetic 
-        playerHealth = int.Parse(Console.ReadLine());
 
-        // Check health bounds and set to default value if health exceeds or undermines acceptable range
         if (playerHealth > HEALTH_MAX_CAP || playerHealth <= HEALTH_MIN_CAP)
             playerHealth = HEALTH_DEFAULT;
-
-        // same as health but for sntregth now
-        playerStrength = int.Parse(Console.ReadLine());
         if (playerStrength > STRENGTH_MAX_CAP || playerStrength <= STRENGTH_MIN_CAP)
             playerStrength = STRENGTH_DEFAULT;
-
-
-        // now for mana
-        playerMana = int.Parse(Console.ReadLine());
         if (playerMana > MANA_MAX_CAP || playerMana <= MANA_MIN_CAP)
             playerMana = MANA_DEFAULT;
 
