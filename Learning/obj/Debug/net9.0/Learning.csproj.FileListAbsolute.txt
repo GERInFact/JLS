@@ -1,0 +1,12 @@
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/bin/Debug/net9.0/Learning.deps.json
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/bin/Debug/net9.0/Learning.dll
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/bin/Debug/net9.0/Learning.pdb
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/obj/Debug/net9.0/Learning.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/obj/Debug/net9.0/Learning.AssemblyInfoInputs.cache
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/obj/Debug/net9.0/Learning.AssemblyInfo.cs
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/obj/Debug/net9.0/Learning.csproj.CoreCompileInputs.cache
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/obj/Debug/net9.0/Learning.sourcelink.json
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/obj/Debug/net9.0/Learning.dll
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/obj/Debug/net9.0/refint/Learning.dll
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/obj/Debug/net9.0/Learning.pdb
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/Learning/obj/Debug/net9.0/ref/Learning.dll
