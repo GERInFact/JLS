@@ -1,19 +1,20 @@
-﻿namespace Introduction;
+﻿using System.Text.Json;
+
+namespace Introduction;
 
 class Program
 {
     static void Main(string[] args)
     {
-        var worldObjects = new Dictionary<string, int[]>();
+        // Load entries from json file and store in dictionary - NO NULL CHECK YET!!!
+        var worldObjects = JsonSerializer.Deserialize<Dictionary<string, int[]>>(File.ReadAllText("world.json"));
 
-        worldObjects["Shop"] = new[] { 2, 10 };
-        worldObjects["Gringots Bank"] = new[] { 0, 2 };
-        worldObjects["Hogwarts Castle"] = new[] { 100, 210 };
-        
-        var playerPosition = new[] { 100, 210 };
+        // set player position
+        var playerPosition = new[] { 1, 1 };
 
         foreach (var worldObject in worldObjects)
         {
+            // Check if player is at any of the stored buildings
             if (playerPosition[0] == worldObject.Value[0] && playerPosition[1] == worldObject.Value[1])
                 Console.WriteLine($"You have entered  at {worldObject.Key}");
         }
