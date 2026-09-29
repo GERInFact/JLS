@@ -22,5 +22,8 @@ class Program
         // print all added items
         for (var i = 0; i < itemCount; i++)
             Console.WriteLine($"{itemNames[i]} added.");
+        
+        // TODO: 
+        // Extend the code so items can be declared with their respective stats (strength, weight, durability, price, id)
     }
 }
