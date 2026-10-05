@@ -1,6 +1,6 @@
 namespace ServiceDLL.Containers;
 
-public class ModelContainer
+public class ServiceRequestsContainer
 {
     // TODO: Implement proper wrapper for ServicesModels 
     // Store all models
