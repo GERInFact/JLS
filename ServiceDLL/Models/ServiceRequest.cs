@@ -2,8 +2,6 @@ namespace ServiceDLL.Models;
 
 public class ServiceRequest
 {
-    // TODO: 
-    // Eingangszeit
     public string Title
     {
         get => this.title;
@@ -30,7 +28,9 @@ public class ServiceRequest
 
     public ServiceEnums.Priority Priority { get; set; }
     public ServiceEnums.State State { get; set; }
-    public DateTime TimeStamp { get; set; }
+    public DateTime DateCreated { get; set; }
+    
+    public DateTime DueDate { get; set; }
 
 
     #region Private Member

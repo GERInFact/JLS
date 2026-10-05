@@ -99,9 +99,9 @@ public class ServiceRequestTests
 
         var expected_Date = DateTime.Today;
         
-        request.TimeStamp = expected_Date;
+        request.DateCreated = expected_Date;
 
-        Assert.Equal(expected_Date, request.TimeStamp);
+        Assert.Equal(expected_Date, request.DateCreated);
     }
 
 }
