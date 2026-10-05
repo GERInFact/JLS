@@ -1,0 +1,12 @@
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/bin/Debug/net9.0/ServiceDLL.deps.json
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/bin/Debug/net9.0/ServiceDLL.dll
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/bin/Debug/net9.0/ServiceDLL.pdb
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/obj/Debug/net9.0/ServiceDLL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/obj/Debug/net9.0/ServiceDLL.AssemblyInfoInputs.cache
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/obj/Debug/net9.0/ServiceDLL.AssemblyInfo.cs
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/obj/Debug/net9.0/ServiceDLL.csproj.CoreCompileInputs.cache
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/obj/Debug/net9.0/ServiceDLL.sourcelink.json
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/obj/Debug/net9.0/ServiceDLL.dll
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/obj/Debug/net9.0/refint/ServiceDLL.dll
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/obj/Debug/net9.0/ServiceDLL.pdb
+/Users/mhille/_Development/C#/JLS/LJ3_2026/JLS_CSharp_Primer/ServiceDLL/obj/Debug/net9.0/ref/ServiceDLL.dll
