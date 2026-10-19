@@ -2,32 +2,15 @@ namespace Introduction;
 
 class Entity2D
 {
-    #region State
-
-    #region Public
-
     public string Name { get; set; }
-    public int Health { get; set; }
-    public int Strength { get; set; }
-    public int Mana { get; set; }
+    public Stats Stats { get; set; } = new();
+    public Weapon Weapon { get; set; }
+    public Vector2D Position { get; set; }
 
-    #endregion
-
-    #region Private
-
-    private Vector2D position = new();
-
-    #endregion
-
-    #endregion
-
-    #region Behavior
-
-    public void Move(Vector2D direction)
+    public void Attack(Entity2D target)
     {
-        this.position.X += direction.X;
-        this.position.Y += direction.Y;
+        if (target == null) return;
+        
+        this.Weapon.ModifyStats(target.Stats);
     }
-
-    #endregion
 }
