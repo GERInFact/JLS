@@ -18,11 +18,31 @@ class Program
         var orcania = new Entity2D { Name = "Orcania", Position = new Vector2D { X = 3, Y = 2 } };
         orcania.Stats.HealthModifier = 100;
 
-        player.Attack(orcania);
-        Console.WriteLine($"{greatAxe.Name} of {player.Name} attacks {orcania.Name}");
-        Console.WriteLine(
-            $"{orcania.Name} has lost {Math.Abs(player.Weapon.Stats.HealthModifier)} health and {Math.Abs(player.Weapon.Stats.ManaModifier)} mana");
-        Console.WriteLine(
-            $"{orcania.Name} has {orcania.Stats.HealthModifier} remaining health and {orcania.Stats.ManaModifier} mana");
+        var isGameRunning = true;
+        while (isGameRunning)
+        {
+            Console.WriteLine("Use w,a,s,d for movement along the axis.");
+            var chosenDirection = Console.ReadLine();
+            switch (chosenDirection.ToLower())
+            {
+             case "w":
+                 player.Move(y:1);
+                 break;
+             case "d":
+                 player.Move(x:1);
+                 break;
+             case "s":
+                 player.Move(y:-1);
+                 break;
+             case "a":
+                 player.Move(x:-1);
+                 break;
+             case "q":
+                 isGameRunning = false;
+                 break;
+            }
+
+            Console.WriteLine($"{player.Name} is at {player.Position}.");
+        }
     }
 }

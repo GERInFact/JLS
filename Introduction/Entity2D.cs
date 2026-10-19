@@ -13,4 +13,10 @@ class Entity2D
         
         this.Weapon.ModifyStats(target.Stats);
     }
+
+    public void Move(int x = 0, int y = 0)
+    {
+        this.Position.X += x;
+        this.Position.Y += y;
+    }
 }
