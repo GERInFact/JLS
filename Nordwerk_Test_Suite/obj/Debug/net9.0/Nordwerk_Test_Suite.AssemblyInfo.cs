@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nordwerk_Test_Suite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99c13c9dc53e94ff94dd25d71f2fb8cb8d827ef7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62adfaaca406987feac9c9dbb93b13e70604bfba")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nordwerk_Test_Suite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nordwerk_Test_Suite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
