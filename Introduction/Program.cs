@@ -1,5 +1,4 @@
-﻿using System.Numerics;
-using Learning;
+﻿using Learning;
 
 namespace Introduction;
 
@@ -7,13 +6,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        // custom defined constructor carrying 1 parameter / argument -> enforced by design
-        Arena southRivenDaleArena = new Arena(new Vector2(1, 2));
+        // First reference to GM Instance
+        var gm = GameManager.Instance;
+        gm.CurrentLevel = "Intro";
 
-        // default constructor
-        Arena northRivenDaleArena = new Arena();
+        // References the same GM object
+        var gm2 = GameManager.Instance;
+        gm2.CurrentLevel = "Main Menu";
 
-        // Member Initialization via Property Initialization  
-        Arena eastRivenDaleArena = new Arena { Position = new Vector2(1, 2), Seats = 122 };
+        // Still the same GM object that is being accessed.
+        Console.WriteLine(GameManager.Instance.CurrentLevel);
     }
 }
