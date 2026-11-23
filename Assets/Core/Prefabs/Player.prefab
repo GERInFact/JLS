@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 1672143944792933131}
   - component: {fileID: 7201428567462012191}
   - component: {fileID: 2655616465505634001}
+  - component: {fileID: 8516641863751714244}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -251,7 +252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8177434288866983260}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.75, y: -3.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -300,3 +301,18 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &8516641863751714244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8177434288866983260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a21641309144526ad30f0240fa9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core._scripts.Player
+  physics2D: {fileID: 2655616465505634001}
+  speedDelta: 5
+  jumpForceDelta: 0
