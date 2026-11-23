@@ -290,7 +290,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0a253f69510444ba6981b597674a87c4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -316,3 +316,5 @@ MonoBehaviour:
   physics2D: {fileID: 2655616465505634001}
   speedDelta: 5
   jumpForceDelta: 6
+  jumpTimeExtended: 0.2
+  maxJumpCount: 2
