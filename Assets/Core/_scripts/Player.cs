@@ -1,26 +1,25 @@
 using System;
-using System.Linq;
 using UnityEngine;
 
 namespace Core._scripts
 {
     public class Player : MonoBehaviour
     {
-        //TODO: Make player move horizontally using A and D 
-        // Make player jump using space, including double jump and extended jump mechanics 
-        // Implement custom fall physics / behaviour by manipulating the downwards velocity 
-        // correctly move player using the unity physics via Rigidbody 2D
-
         [SerializeField] private Rigidbody2D physics2D;
         [SerializeField] private float speedDelta;
         [SerializeField] private float jumpForceDelta;
         [SerializeField] private float jumpTimeExtended;
         [SerializeField] private int maxJumpCount;
+        [SerializeField] private Transform feetTransform;
+        [SerializeField] private float detectionRadius;
+        [SerializeField] private LayerMask detectionLayers;
+
 
         private float horizontal;
         private int jumpsRemaining;
         private float jumpTime;
         private bool isJumping;
+        private float fallTime;
 
         private void Start()
         {
@@ -39,6 +38,7 @@ namespace Core._scripts
                 this.jumpsRemaining--;
                 this.jumpTime = 0;
                 this.isJumping = true;
+                this.fallTime = 0;
             }
 
             if (Input.GetButton("Jump") && this.jumpTime <= this.jumpTimeExtended && this.isJumping)
@@ -47,13 +47,27 @@ namespace Core._scripts
                 this.jumpTime += Time.deltaTime;
             }
             else
+            {
+                this.fallTime += Time.deltaTime;
                 this.isJumping = false;
+            }
         }
 
-        private void OnCollisionEnter2D(Collision2D collisionObjectInfo)
+        private void FixedUpdate()
         {
-            if (collisionObjectInfo.contacts.FirstOrDefault().normal.y > .8f)
-                this.jumpsRemaining = this.maxJumpCount;
+            if (Physics2D.OverlapCircle(this.feetTransform.position, this.detectionRadius, this.detectionLayers) ==
+                null || this.fallTime < .1f) return;
+
+            this.jumpsRemaining = this.maxJumpCount;
+            this.fallTime = 0;
         }
+
+#if UNITY_EDITOR
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(this.feetTransform.position, this.detectionRadius);
+        }
+
+#endif
     }
 }
