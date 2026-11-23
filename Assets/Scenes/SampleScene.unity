@@ -2440,6 +2440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8516641863751714244, guid: b4f6f71376ebf46668c9560b242558fe, type: 3}
+      propertyPath: maxJumpCount
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

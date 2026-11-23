@@ -315,4 +315,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Core._scripts.Player
   physics2D: {fileID: 2655616465505634001}
   speedDelta: 5
-  jumpForceDelta: 0
+  jumpForceDelta: 6
